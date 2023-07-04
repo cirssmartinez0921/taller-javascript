@@ -1,13 +1,27 @@
-// Valor: 0.25 - Convertir una cadena en una lista
+// Hubo un examen en tu clase y lo pasaste. ¡Felicidades! Pero eres una persona ambiciosa. Quiere saber si es mejor que el estudiante promedio de su clase.
 
-// Escriba una función para dividir una cadena y convertirla en una lista de palabras.
+// Recibe una lista con los puntajes de las pruebas de sus compañeros. ¡Ahora calcule el promedio y compare su puntaje!
 
-let cadena = "hola, esta es una cadena";
+// ¡Devuelve True si estás mejor, de lo contrario False!
 
-let palabras = dividirCadena (cadena);
+// // Nota: Sus puntos no están incluidos en la lista de puntos de su clase. ¡Para calcular el punto promedio, puede agregar su punto a la lista dada!
 
-function dividirCadena (cadena){
-    return cadena.split (" ");
+function SoyMejor(PuntajeCompaneros, MiPuntaje) {
+    PuntajeCompaneros.push (MiPuntaje);
+
+    let sumaPuntajes = PuntajeCompaneros.reduce ((a,b) => a + b, 0);
+    let promedio = sumaPuntajes / PuntajeCompaneros.length;
+
+    if (MiPuntaje > promedio) {
+        return true;   
+     } else {
+        return false;
+     }
 }
 
-console.log(palabras);
+     let PuntajeCompaneros = [8, 7, 6, 5];
+     let MiPuntaje = 9;
+
+     let SoyMejorQuePromedio =SoyMejor(PuntajeCompaneros,MiPuntaje);
+
+     console.log(SoyMejorQuePromedio);

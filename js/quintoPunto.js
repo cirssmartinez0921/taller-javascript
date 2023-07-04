@@ -40,8 +40,8 @@ function combinarListas(lista1, lista2) {
     return [... new Set(resultado)];
   }
 
-  let lista1 = [1,2,3,4,5,6]
-  let lista2 = [7,8,9,10]
+  let lista1 = [2,4,1]
+  let lista2 = [.7,8,9,10]
 
   
 
