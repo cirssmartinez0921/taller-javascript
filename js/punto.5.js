@@ -6,47 +6,15 @@
 
 // Nota: lista1 y lista2 pueden clasificarse en diferentes órdenes. También lista1 y lista2 pueden tener los mismos números enteros. Eliminar duplicado en el resultado devuelto.
 
-function combinarListas(lista1, lista2) {
-    let resultado = [];
+      let lista1 = [2, 4, 1];
+      let lista2 = [7, 8, 8, 9, 10];
 
-    
-    let i = 0;
-    let j = 0;
-  
-    while (i < lista1.length && j < lista2.length) {
-      if (lista1[i] < lista2[j]) {
-        resultado.push(lista1[i]);
-        i++;
-      } else if (lista1[i] > lista2[j]) {
-        resultado.push(lista2[j]);
-        j++;
-      } else {
-        resultado.push(lista1[i]);
-        i++;
-        j++;
-      }
-    }
-  
-    while (i < lista1.length) {
-      resultado.push(lista1[i]);
-      i++;
-    }
-  
-    while (j < lista2.length) {
-      resultado.push(lista2[j]);
-      j++;
-    }
-  
-    return [... new Set(resultado)];
-  }
+      let combinar = lista1.concat (lista2);
 
-  let lista1 = [2,4,1]
-  let lista2 = [.7,8,9,10]
-
-  
-
-
-  let resultado = combinarListas (lista1,lista2)
-
-  console.log (resultado);
+      const OrdenarNumeros = combinar
+       OrdenarNumeros.sort (function(a,b){
+        return  (a - b);
+       });
+       
+       console.log([... new Set (OrdenarNumeros)]);
   
